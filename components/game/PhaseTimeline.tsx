@@ -1,5 +1,6 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
 import { useGameStore } from '@/lib/stores/gameStore';
 import { PhaseId } from '@/lib/types/game';
 import { getPhaseProgress } from '@/lib/engine/gameEngine';
@@ -16,6 +17,7 @@ const phases: { id: PhaseId; label: string; icon: string }[] = [
 ];
 
 export default function PhaseTimeline() {
+  const router = useRouter();
   const { currentPhase, phases: phaseStates, completedEvents } = useGameStore();
 
   return (
@@ -26,14 +28,19 @@ export default function PhaseTimeline() {
         const isActive = phase.id === currentPhase;
         const isCompleted = state.status === 'completed';
         const isLocked = state.status === 'locked';
+        const isClickable = isCompleted || isActive;
 
         return (
           <div key={phase.id} className="flex items-center">
-            <div className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-              isActive ? 'bg-blue-50 text-blue-700 ring-2 ring-blue-200' :
-              isCompleted ? 'bg-green-50 text-green-700' :
-              'bg-gray-50 text-gray-400'
-            }`}>
+            <button
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                isActive ? 'bg-blue-50 text-blue-700 ring-2 ring-blue-200' :
+                isCompleted ? 'bg-green-50 text-green-700 hover:bg-green-100 hover:ring-2 hover:ring-green-200' :
+                'bg-gray-50 text-gray-400'
+              } ${isClickable ? 'cursor-pointer' : 'cursor-default'}`}
+              onClick={isClickable ? () => router.push(`/game/phase/${phase.id}`) : undefined}
+              disabled={!isClickable}
+            >
               <span className="text-base">{isCompleted ? '✅' : isLocked ? '🔒' : phase.icon}</span>
               <span className="whitespace-nowrap">{phase.label}</span>
               {isActive && (
@@ -41,7 +48,7 @@ export default function PhaseTimeline() {
                   {progress}%
                 </span>
               )}
-            </div>
+            </button>
             {index < phases.length - 1 && (
               <div className={`w-6 h-0.5 mx-1 ${isCompleted ? 'bg-green-300' : 'bg-gray-200'}`} />
             )}

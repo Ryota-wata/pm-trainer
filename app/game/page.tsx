@@ -43,6 +43,9 @@ export default function GameDashboard() {
   const riskSummary = getRiskSummary(projectState.risks);
   const shAvg = projectState.stakeholders.reduce((s, sh) => s + sh.satisfaction, 0) / projectState.stakeholders.length;
 
+  const allPhaseIds: PhaseId[] = ['initiation', 'pre-requirements', 'rom-planning', 'requirements', 'estimation', 'design-dev', 'testing', 'closing'];
+  const completedPhaseIds = allPhaseIds.filter(id => phases[id].status === 'completed');
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-8 animate-fade-in">
       <div className="mb-8">
@@ -118,7 +121,7 @@ export default function GameDashboard() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
         <Card className="p-6">
           <h2 className="text-lg font-bold text-gray-900 mb-4">現在のフェーズ</h2>
           <div className="text-center py-4">
@@ -176,6 +179,31 @@ export default function GameDashboard() {
           )}
         </Card>
       </div>
+
+      {/* 完了済みフェーズ一覧 */}
+      {completedPhaseIds.length > 0 && (
+        <div>
+          <h2 className="text-lg font-bold text-gray-900 mb-3">完了済みフェーズ</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+            {completedPhaseIds.map(phaseId => (
+              <Card
+                key={phaseId}
+                hover
+                className="p-4 cursor-pointer"
+                onClick={() => router.push(phaseRoutes[phaseId])}
+              >
+                <div className="flex items-center gap-3">
+                  <span className="text-2xl">{phaseIcons[phaseId]}</span>
+                  <div className="flex-1 min-w-0">
+                    <div className="text-sm font-semibold text-gray-900 truncate">{phases[phaseId].nameJa}</div>
+                    <div className="text-xs text-green-600 font-medium">完了 ✓</div>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
