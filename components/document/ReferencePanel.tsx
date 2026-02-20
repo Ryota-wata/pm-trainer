@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState } from 'react';
 import { DocumentType } from '@/lib/types/document';
 import { PhaseId } from '@/lib/types/game';
 import { useGameStore } from '@/lib/stores/gameStore';
@@ -127,24 +127,15 @@ export default function ReferencePanel({ isOpen, onClose, currentDocType }: Refe
 /* ─── Accordion height animation helper ─── */
 
 function AccordionContent({ isOpen, children }: { isOpen: boolean; children: React.ReactNode }) {
-  const ref = useRef<HTMLDivElement>(null);
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    if (ref.current) {
-      setHeight(ref.current.scrollHeight);
-    }
-  }, [isOpen, children]);
-
   return (
     <div
-      className="overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out"
+      className="grid transition-[grid-template-rows,opacity] duration-300 ease-in-out"
       style={{
-        maxHeight: isOpen ? `${height}px` : '0px',
+        gridTemplateRows: isOpen ? '1fr' : '0fr',
         opacity: isOpen ? 1 : 0,
       }}
     >
-      <div ref={ref}>
+      <div className="overflow-hidden">
         {children}
       </div>
     </div>
