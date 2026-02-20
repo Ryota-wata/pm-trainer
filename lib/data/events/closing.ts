@@ -78,6 +78,8 @@ export const closingEvents: GameEvent[] = [
       { speaker: '中村 裕子', speakerId: 'nakamura', text: '振り返りを行いたいのですが、チームメンバーの率直な意見を集めるにはどうすべきでしょうか。', emotion: 'neutral' },
       { speaker: '高山 誠一', speakerId: 'takayama', text: '最終的な成果と実績を報告してくれ。予算と期限の遵守状況も含めて。教訓を次に活かしたい。', emotion: 'neutral' },
       { speaker: '田中 美咲', speakerId: 'tanaka', text: '新システムのおかげで案件の進捗が一目で分かるようになり、営業会議の準備時間が半分以下になりました！', emotion: 'happy' },
+      { speaker: '中村 裕子', speakerId: 'nakamura', text: '振り返ると、要件定義フェーズで現場ユーザーにプロトタイプを見せたのが効果的でした。一方、テストフェーズでの変更要求は大きな手戻りになりました。', emotion: 'neutral' },
+      { speaker: '鈴木 大輔', speakerId: 'suzuki', text: 'ベンダーの立場からすると、初期段階でのリスク共有と定期的なステータス会議が、信頼関係の構築に役立ちました。変更管理プロセスを最初から合意していたのも良かったです。', emotion: 'neutral' },
     ],
     choices: [
       {

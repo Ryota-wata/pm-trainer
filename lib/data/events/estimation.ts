@@ -10,6 +10,8 @@ export const estimationEvents: GameEvent[] = [
     dialogue: [
       { speaker: '中村 裕子', speakerId: 'nakamura', text: 'WBSは3階層まで分解すれば管理しやすいと思います。ワークパッケージの粒度が重要です。', emotion: 'neutral' },
       { speaker: '鈴木 大輔', speakerId: 'suzuki', text: '各ワークパッケージの工数を見積もりましょう。3点見積法を使えば精度が上がります。', emotion: 'neutral' },
+      { speaker: '中村 裕子', speakerId: 'nakamura', text: '大枠としては、要件定義（2ヶ月）、基本設計（2ヶ月）、詳細設計（1.5ヶ月）、開発（3.5ヶ月）、テスト（2ヶ月）、展開・導入（1ヶ月）を想定しています。', emotion: 'neutral' },
+      { speaker: '鈴木 大輔', speakerId: 'suzuki', text: 'ベンダー側はSE2名、PG3名の体制を想定しています。御社側はPM1名、業務担当2名の参画が必要です。ピーク時の開発フェーズは合計8名体制になります。', emotion: 'neutral' },
       { speaker: '中村 裕子', speakerId: 'nakamura', text: 'ボトムアップで積み上げると合計が5,200万になりそうです。予算をどう調整しますか？', emotion: 'worried' },
     ],
     choices: [
@@ -76,6 +78,8 @@ export const estimationEvents: GameEvent[] = [
     dialogue: [
       { speaker: '中村 裕子', speakerId: 'nakamura', text: '山積みの結果、5月〜7月にリソースが集中し過負荷になっています。平準化が必要です。', emotion: 'worried' },
       { speaker: '鈴木 大輔', speakerId: 'suzuki', text: 'リソースの山崩しをすると、全体スケジュールが1ヶ月延びる可能性があります。', emotion: 'neutral' },
+      { speaker: '中村 裕子', speakerId: 'nakamura', text: '主要マイルストーンは、要件定義完了（3月末）、基本設計完了（5月末）、開発完了（9月末）、UAT完了（11月末）、本番稼働（翌年3月末）です。', emotion: 'neutral' },
+      { speaker: '中村 裕子', speakerId: 'nakamura', text: 'クリティカルパスは「要件定義→基本設計→詳細設計→開発→結合テスト→UAT」です。基幹システム連携部分はSAP側の改修が必要で、外部依存があります。', emotion: 'neutral' },
       { speaker: '高山 誠一', speakerId: 'takayama', text: 'スケジュールを延ばすのは避けたい。他の方法はないのか？', emotion: 'angry' },
     ],
     choices: [

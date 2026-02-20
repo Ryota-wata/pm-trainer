@@ -10,6 +10,8 @@ export const requirementsEvents: GameEvent[] = [
     dialogue: [
       { speaker: '田中 美咲', speakerId: 'tanaka', text: '要件として、顧客情報管理、案件パイプライン管理、見積書作成、売上予測ダッシュボードは必須です。', emotion: 'neutral' },
       { speaker: '中村 裕子', speakerId: 'nakamura', text: 'すべての要件を12ヶ月で実装するのは厳しいかもしれません。優先順位をつけませんか？', emotion: 'worried' },
+      { speaker: '田中 美咲', speakerId: 'tanaka', text: '顧客管理は企業情報・担当者情報・商談履歴・対応メモを一元管理したいです。パイプラインはカンバン形式で、商談ステージ（初回接触→提案→見積→交渉→受注/失注）ごとに管理したい。', emotion: 'neutral' },
+      { speaker: '田中 美咲', speakerId: 'tanaka', text: '見積書は既存のExcelテンプレートをベースに、商品マスタから自動入力できるようにしてほしい。ダッシュボードは月別・担当者別・商品別の売上実績と予測を表示したいです。', emotion: 'neutral' },
       { speaker: '田中 美咲', speakerId: 'tanaka', text: 'できればモバイルアプリ対応と基幹システム連携もほしいのですが…予算的に可能でしょうか？', emotion: 'neutral' },
     ],
     choices: [
@@ -76,6 +78,8 @@ export const requirementsEvents: GameEvent[] = [
     dialogue: [
       { speaker: '佐々木 健太', speakerId: 'sasaki', text: 'セキュリティ要件として、多要素認証、データ暗号化、アクセスログ管理は必須だ。ISO27001準拠も視野に入れてほしい。', emotion: 'neutral' },
       { speaker: '中村 裕子', speakerId: 'nakamura', text: 'パフォーマンス要件も決めておきたいです。大量データ処理時のレスポンスタイム基準が必要です。', emotion: 'neutral' },
+      { speaker: '中村 裕子', speakerId: 'nakamura', text: '同時接続ユーザー数は最大100名、画面レスポンスは3秒以内、日次バッチ処理は1時間以内に完了を目標にしたいです。', emotion: 'neutral' },
+      { speaker: '佐々木 健太', speakerId: 'sasaki', text: '稼働率は99.5%以上、月間ダウンタイムは約3.6時間以内に。災害対策として、データセンターは地理的に離れた2拠点にしてほしい。', emotion: 'neutral' },
       { speaker: '鈴木 大輔', speakerId: 'suzuki', text: '非機能要件の厳しさによって、アーキテクチャ設計が大きく変わります。早めに確定したいですね。', emotion: 'neutral' },
     ],
     choices: [

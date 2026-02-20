@@ -75,6 +75,8 @@ export const romPlanningEvents: GameEvent[] = [
       { speaker: '佐々木 健太', speakerId: 'sasaki', text: 'フルスクラッチ開発なので、要件の認識ズレによる手戻りリスクが最も心配だ。リスク対応計画をしっかり立ててほしい。', emotion: 'worried' },
       { speaker: '中村 裕子', speakerId: 'nakamura', text: '品質基準と調達方針も決めておく必要があります。ベンダー選定の評価基準はどうしますか？', emotion: 'neutral' },
       { speaker: '山本 真理', speakerId: 'yamamoto', text: '新しいシステムを導入しても、営業担当が使いこなせなければ意味がないと思います。定着しないリスクもありますよね。', emotion: 'worried' },
+      { speaker: '中村 裕子', speakerId: 'nakamura', text: '過去の類似プロジェクトでは、要件の手戻りが平均2回発生し、その都度1ヶ月の遅延が出ています。新技術導入時の学習コストも見積りに含める必要があります。', emotion: 'neutral' },
+      { speaker: '佐々木 健太', speakerId: 'sasaki', text: '品質基準として、単体テストカバレッジ80%以上、結合テストのバグ密度0.5件/KL以下を設定したい。セキュリティ脆弱性診断も必須だ。', emotion: 'neutral' },
     ],
     choices: [
       {

@@ -10,6 +10,8 @@ export const preRequirementsEvents: GameEvent[] = [
     dialogue: [
       { speaker: '田中 美咲', speakerId: 'tanaka', text: '営業の業務フローを整理したいのですが、担当者ごとにやり方が違っていて…顧客管理も案件管理も標準化されていないのが実情です。', emotion: 'worried' },
       { speaker: '山本 真理', speakerId: 'yamamoto', text: '私たちは長年Excelと紙でやってきました。急にシステムに変えると言われても、何が良くなるのか具体的に示してほしいです。', emotion: 'worried' },
+      { speaker: '山本 真理', speakerId: 'yamamoto', text: '日々の業務を具体的に言うと、朝はExcelで案件リストを確認し、外出先ではメモを取り、帰社後にExcelに転記しています。月末の営業報告書作成には丸一日かかります。', emotion: 'worried' },
+      { speaker: '田中 美咲', speakerId: 'tanaka', text: '顧客からの問い合わせ対応で過去の商談履歴が見つからず、平均15分かかっています。営業担当の退職時には引継ぎに2週間かかることもあります。', emotion: 'worried' },
       { speaker: '中村 裕子', speakerId: 'nakamura', text: '業務フロー図を作成すれば、ボトルネックや重複作業が見えてくるはずです。どの粒度で分析しますか？', emotion: 'neutral' },
     ],
     choices: [
@@ -76,6 +78,8 @@ export const preRequirementsEvents: GameEvent[] = [
     dialogue: [
       { speaker: '大森 正義', speakerId: 'omori', text: '新システムでは案件の進捗をリアルタイムで把握し、売上予測の精度を上げたい。経営ダッシュボードも実現してほしい。', emotion: 'neutral' },
       { speaker: '佐々木 健太', speakerId: 'sasaki', text: '顧客情報を扱うシステムなので、セキュリティ基準はしっかり確保してほしい。個人情報保護とアクセス制御は最重要だ。', emotion: 'neutral' },
+      { speaker: '大森 正義', speakerId: 'omori', text: '具体的なKPIとしては、営業会議の準備時間50%削減、案件の受注率10%向上、顧客対応時間30%短縮を達成したい。', emotion: 'neutral' },
+      { speaker: '佐々木 健太', speakerId: 'sasaki', text: '個人情報保護法への準拠は必須だ。アクセス権限は部門・役職ベースで制御し、監査ログの保持期間は5年、バックアップは日次で取得してほしい。', emotion: 'neutral' },
       { speaker: '田中 美咲', speakerId: 'tanaka', text: '理想を言えばキリがないですが、現実的に12ヶ月で何ができるかを見極めたいです。', emotion: 'neutral' },
     ],
     choices: [

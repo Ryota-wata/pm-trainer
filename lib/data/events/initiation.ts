@@ -10,7 +10,9 @@ export const initiationEvents: GameEvent[] = [
     dialogue: [
       { speaker: '高山 誠一', speakerId: 'takayama', text: 'PMに就任してくれてありがとう。今回のプロジェクトは会社にとって非常に重要だ。', emotion: 'neutral' },
       { speaker: '高山 誠一', speakerId: 'takayama', text: '営業部門では顧客情報や案件管理がExcelや紙ベースで、情報共有や進捗把握に大きな課題がある。新しいシステムをフルスクラッチで開発して営業力を強化したい。', emotion: 'neutral' },
-      { speaker: '高山 誠一', speakerId: 'takayama', text: '予算は5,000万円、期間は12ヶ月だ。まずはプロジェクト憲章を作成して、正式にキックオフしたい。', emotion: 'neutral' },
+      { speaker: '高山 誠一', speakerId: 'takayama', text: '予算は5,000万円、期間は12ヶ月だ。来年4月の新年度に合わせて本番稼働させたい。まずはプロジェクト憲章を作成して、正式にキックオフしたい。', emotion: 'neutral' },
+      { speaker: '高山 誠一', speakerId: 'takayama', text: '成功基準としては、案件の進捗をリアルタイムで可視化し、営業会議の資料作成時間を50%削減、3年でROI 150%達成を目標にしている。', emotion: 'neutral' },
+      { speaker: '高山 誠一', speakerId: 'takayama', text: '対象は営業部門（約80名）と営業企画部門（約15名）だ。既存の基幹システム（SAP）との連携は必須条件だが、経理や製造部門は今回のスコープ外とする。', emotion: 'neutral' },
     ],
     choices: [
       {
@@ -75,6 +77,7 @@ export const initiationEvents: GameEvent[] = [
     dialogue: [
       { speaker: '田中 美咲', speakerId: 'tanaka', text: '今は顧客情報がExcelのファイルに散在していて、担当者ごとにバラバラなんです。案件の進捗も把握できず、営業会議の資料作りに毎週半日かかっています。', emotion: 'worried' },
       { speaker: '田中 美咲', speakerId: 'tanaka', text: '外出先からも案件情報を確認・更新できるモバイル対応や、見積書の自動作成機能もほしいのですが…', emotion: 'worried' },
+      { speaker: '田中 美咲', speakerId: 'tanaka', text: '現在、顧客情報は担当者ごとに約30個のExcelファイルに分散しています。案件数は常時200件前後で、月間の見積作成は約50件です。', emotion: 'worried' },
       { speaker: '大森 正義', speakerId: 'omori', text: 'このプロジェクトはDX推進の第一歩だ。成功すれば他部門にも展開したい。ROIを意識してほしい。', emotion: 'neutral' },
     ],
     choices: [
